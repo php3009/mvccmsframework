@@ -513,7 +513,7 @@ class product {
 			$this->db->query($qry);	
 		}
 		
-		/* [show selected flag on front home page as slider][vimal_chauhan] [13-Apr-2011][start] */
+		
 		$latest_sale_flag = 'N';
 		$fresh_arrivals_flag = 'N';
 		$featured_products_flag = 'N';
@@ -536,7 +536,7 @@ class product {
 			$off_pricers_flag = $_REQUEST['off_pricers_flag'];
 		}
 		
-		/* [show selected flag on front home page as slider][vimal_chauhan] [13-Apr-2011][end] */
+		
 		$available_date = '';
 		if(isset($available_dateTemp[2]) && isset($available_dateTemp[1]) && isset($available_dateTemp[0])) {
 			$available_dateTemp = $available_dateTemp[2] . "-" . $available_dateTemp[1] . "-" . $available_dateTemp[0];
@@ -560,12 +560,12 @@ class product {
 			$maxOrdering = $result['m'];
 		}
 		$maxOrdering = $maxOrdering+1;
-		/* [insert selected flag][vimal_chauhan] [13-Apr-2011][start] */
+		
 		$qry = "INSERT INTO site_products
 				(vendor_id, category_id, brandid, variant, code, sku, short_desc, long_desc, price, dprice, in_stock, available_date, name, min_purchase_qty, max_purchase_qty, related_products, published, latest_sale_flag, fresh_arrivals_flag, featured_products_flag, best_sellers_flag, off_pricers_flag, ordering)
 				VALUES ('{$vname}', '{$parentStr}', '{$vendorbrandId}', 'N', '{$code}', '{$sku}', '{$short_desc}', '{$description}', '{$price}', '{$dprice}', '{$in_stock}', '{$available_date}', '{$name}', '{$min_purchase_qty}', '{$max_purchase_qty}', '{$related_products}', '{$published}', '{$latest_sale_flag}', '{$fresh_arrivals_flag}', '{$featured_products_flag}', '{$best_sellers_flag}', '{$off_pricers_flag}', '{$maxOrdering}')"; 
 
-		/* [insert selected flag][vimal_chauhan] [13-Apr-2011][start] */
+		
 		$this->db->query($qry);
 		$pid = $this->db->get_insert_id(); 
 		
@@ -762,7 +762,7 @@ class product {
 			$this->db->query($qry);	
 		}
 
-		/* [show selected flag on front home page as slider][vimal_chauhan] [13-Apr-2011][start] */
+		
 		$latest_sale_flag = 'N';
 		$fresh_arrivals_flag = 'N';
 		$featured_products_flag = 'N';
@@ -784,7 +784,7 @@ class product {
 		if(isset($_REQUEST['off_pricers_flag'])) {
 			$off_pricers_flag = $_REQUEST['off_pricers_flag'];
 		}
-		/* [show selected flag on front home page as slider][vimal_chauhan] [13-Apr-2011][end] */
+		
 		
 		
 		
@@ -1088,7 +1088,7 @@ class product {
 			$this->db->query($qry);	
 		}
 
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][start] */
+		
 		$latest_sale_flag = 'N';
 		$fresh_arrivals_flag = 'N';
 		$featured_products_flag = 'N';
@@ -1110,7 +1110,7 @@ class product {
 		if(isset($_REQUEST['off_pricers_flag'])) {
 			$off_pricers_flag = $_REQUEST['off_pricers_flag'];
 		}
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][end] */
+		
 		$available_date = '';
 		if(isset($available_dateTemp[2]) && isset($available_dateTemp[1]) && isset($available_dateTemp[0])) {
 			$available_dateTemp = $available_dateTemp[2] . "-" . $available_dateTemp[1] . "-" . $available_dateTemp[0];
@@ -1127,7 +1127,7 @@ class product {
 			$related_productsStr = implode(',', $_REQUEST['related_products']);
 			$related_products = $related_productsStr;
 		}
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][start] */
+		
 		$qry = "UPDATE site_products
 				SET category_id = '{$parentStr}',
 				brandid = '{$vendorbrandId}', 
@@ -1151,7 +1151,7 @@ class product {
 				best_sellers_flag = '{$best_sellers_flag}',
 				off_pricers_flag = '{$off_pricers_flag}'
 			WHERE id = '{$id}'";
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][end] */
+		
 		$this->db->query($qry);
 
 		$sefurl = htmlentities($_REQUEST['sefurl'], ENT_QUOTES);
@@ -1408,7 +1408,7 @@ class product {
 			$this->db->query($qry);	
 		}
 
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][start] */
+		
 		$latest_sale_flag = 'N';
 		$fresh_arrivals_flag = 'N';
 		$featured_products_flag = 'N';
@@ -1430,7 +1430,7 @@ class product {
 		if(isset($_REQUEST['off_pricers_flag'])) {
 			$off_pricers_flag = $_REQUEST['off_pricers_flag'];
 		}
-		/*[edit the front display slider setting][vimal_chauhan][13-Apr-2011][end] */
+		
 		
 		if(isset($available_dateTemp[2]) && isset($available_dateTemp[1]) && isset($available_dateTemp[0])) {
 			$available_dateTemp = $available_dateTemp[2] . "-" . $available_dateTemp[1] . "-" . $available_dateTemp[0];
