@@ -1,0 +1,568 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "Segoe UI",georgia,"trebuchet ms",arial,serif;
+	background-color: #F2F1F0;
+	width:1000px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#headercontainer {
+	height: 125px;
+	width: 90%;
+	border: 1px solid #F2F1F0;	
+	float: left;
+	/*background-color: #F1EFE2;*/
+	background-color: #F2F1F0;
+}
+
+#innerheader {
+	margin-left: 25px;
+    	margin-top: 40px;
+	border: 1px solid #F2F1F0;
+	float: left;
+	width: 96%;
+}
+
+#lefttitle {
+	color: #A644FB;
+	font-size: 35px;
+    	font-weight: bold;
+    	float: left;
+    	margin-top: 6px;
+}
+
+#countdown {
+	float: right;
+    	font-size: 35px;
+    	margin-right: 20px;
+    	margin-top: 6px;
+}
+
+#newgame {
+	border: 1px solid #F2F1F0;	
+	float: right;
+	background-color: #6B9A49;
+	border: 2px solid #F1EFE2;
+	border-radius: 15px 15px 15px 15px;
+	color: #F1EFE2;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	font-size: 25px;
+	font-weight: normal;
+	padding: 10px 25px;
+    	cursor: pointer;
+}
+
+#newgame:hover{
+	background-color: #334455;	
+}
+
+#bodycontainer {
+	clear: both;
+	border: 1px solid #F2F1F0;
+	height: 100px;
+	width: 100%;	
+}
+
+#gamecontainer {
+	border: 5px solid #ccc;
+    	float: left;
+    	height: 550px;
+    	margin-left: 60px;
+    	padding-top: 20px;
+    	padding-left: 60px;
+    	padding-right: 60px;
+	width: auto;
+	background-color: #ccc;
+}
+
+#barcontainer {
+	margin-left: 60px;
+    	margin-right: 110px;
+}
+
+
+#brickrow1, #brickrow2, #brickrow3, #brickrow4, #brickrow5, #brickrow6, #brickrow7, #brickrow8, #brickrow9 {
+	clear: both;
+}
+.bricksprite {
+	display: block; 
+	width: 50px; 
+	height: 20px; 
+	background-image: url(../images/slice.png); 
+	background-repeat: no-repeat;
+	/*border: 2px solid black;*/	
+	float: left;
+ 	background-color: white;
+}
+
+#sprite1 {
+	background-position: 0px 0px;
+}
+#sprite2 {
+	background-position: -50px 0px;
+}
+#sprite3 {
+	background-position: -100px 0px;
+}
+#sprite4 {
+	background-position: -150px 0px;
+}
+#sprite5 {
+	background-position: -200px 0px;
+}
+#sprite6 {
+	background-position: -250px 0px;
+}
+#sprite7 {
+	background-position: -300px 0px;
+}
+#sprite8 {
+	background-position: -350px 0px;
+}
+#sprite9 {
+	background-position: -400px 0px;
+}
+#sprite10 {
+	background-position: -450px 0px;
+}
+#sprite11 {
+	background-position: -500px 0px;
+}
+#sprite12 {
+	background-position: -550px 0px;
+}
+#sprite13 {
+	background-position: -600px 0px;
+}
+#sprite14 {
+	background-position: -650px 0px;
+}
+
+
+#sprite15 {
+	background-position: 0px -20px;
+}
+#sprite16 {
+	background-position: -50px -20px;
+}
+#sprite17 {
+	background-position: -100px -20px;
+}
+#sprite18 {
+	background-position: -150px -20px;
+}
+#sprite19 {
+	background-position: -200px -20px;
+}
+#sprite20 {
+	background-position: -250px -20px;
+}
+#sprite21 {
+	background-position: -300px -20px;
+}
+#sprite22 {
+	background-position: -350px -20px;
+}
+#sprite23 {
+	background-position: -400px -20px;
+}
+#sprite24 {
+	background-position: -450px -20px;
+}
+#sprite25 {
+	background-position: -500px -20px;
+}
+#sprite26 {
+	background-position: -550px -20px;
+}
+#sprite27 {
+	background-position: -600px -20px;
+}
+#sprite28 {
+	background-position: -650px -20px;
+}
+
+
+#sprite29 {
+	background-position: 0px -40px;
+}
+#sprite30 {
+	background-position: -50px -40px;
+}
+#sprite31 {
+	background-position: -100px -40px;
+}
+#sprite32 {
+	background-position: -150px -40px;
+}
+#sprite33 {
+	background-position: -200px -40px;
+}
+#sprite34 {
+	background-position: -250px -40px;
+}
+#sprite35 {
+	background-position: -300px -40px;
+}
+#sprite36 {
+	background-position: -350px -40px;
+}
+#sprite37 {
+	background-position: -400px -40px;
+}
+#sprite38 {
+	background-position: -450px -40px;
+}
+#sprite39 {
+	background-position: -500px -40px;
+}
+#sprite40 {
+	background-position: -550px -40px;
+}
+#sprite41 {
+	background-position: -600px -40px;
+}
+#sprite42 {
+	background-position: -650px -40px;
+}
+
+#sprite43 {
+	background-position: 0px -60px;
+}
+#sprite44 {
+	background-position: -50px -60px;
+}
+#sprite45 {
+	background-position: -100px -60px;
+}
+#sprite46 {
+	background-position: -150px -60px;
+}
+#sprite47 {
+	background-position: -200px -60px;
+}
+#sprite48 {
+	background-position: -250px -60px;
+}
+#sprite49 {
+	background-position: -300px -60px;
+}
+#sprite50 {
+	background-position: -350px -60px;
+}
+#sprite51 {
+	background-position: -400px -60px;
+}
+#sprite52 {
+	background-position: -450px -60px;
+}
+#sprite53 {
+	background-position: -500px -60px;
+}
+#sprite54 {
+	background-position: -550px -60px;
+}
+#sprite55 {
+	background-position: -600px -60px;
+}
+#sprite56 {
+	background-position: -650px -60px;
+}
+
+
+#sprite57 {
+	background-position: 0px -80px;
+}
+#sprite58 {
+	background-position: -50px -80px;
+}
+#sprite59 {
+	background-position: -100px -80px;
+}
+#sprite60 {
+	background-position: -150px -80px;
+}
+#sprite61 {
+	background-position: -200px -80px;
+}
+#sprite62 {
+	background-position: -250px -80px;
+}
+#sprite63 {
+	background-position: -300px -80px;
+}
+#sprite64 {
+	background-position: -350px -80px;
+}
+#sprite65 {
+	background-position: -400px -80px;
+}
+#sprite66 {
+	background-position: -450px -80px;
+}
+#sprite67 {
+	background-position: -500px -80px;
+}
+#sprite68 {
+	background-position: -550px -80px;
+}
+#sprite69 {
+	background-position: -600px -80px;
+}
+#sprite70 {
+	background-position: -650px -80px;
+}
+
+
+#sprite71 {
+	background-position: 0px -100px;
+}
+#sprite72 {
+	background-position: -50px -100px;
+}
+#sprite73 {
+	background-position: -100px -100px;
+}
+#sprite74 {
+	background-position: -150px -100px;
+}
+#sprite75 {
+	background-position: -200px -100px;
+}
+#sprite76 {
+	background-position: -250px -100px;
+}
+#sprite77 {
+	background-position: -300px -100px;
+}
+#sprite78 {
+	background-position: -350px -100px;
+}
+#sprite79 {
+	background-position: -400px -100px;
+}
+#sprite80 {
+	background-position: -450px -100px;
+}
+#sprite81 {
+	background-position: -500px -100px;
+}
+#sprite82 {
+	background-position: -550px -100px;
+}
+#sprite83 {
+	background-position: -600px -100px;
+}
+#sprite84 {
+	background-position: -650px -100px;
+}
+
+
+#sprite85 {
+	background-position: 0px -120px;
+}
+#sprite86 {
+	background-position: -50px -120px;
+}
+#sprite87 {
+	background-position: -100px -120px;
+}
+#sprite88 {
+	background-position: -150px -120px;
+}
+#sprite89 {
+	background-position: -200px -120px;
+}
+#sprite90 {
+	background-position: -250px -120px;
+}
+#sprite91 {
+	background-position: -300px -120px;
+}
+#sprite92 {
+	background-position: -350px -120px;
+}
+#sprite93 {
+	background-position: -400px -120px;
+}
+#sprite94 {
+	background-position: -450px -120px;
+}
+#sprite95 {
+	background-position: -500px -120px;
+}
+#sprite96 {
+	background-position: -550px -120px;
+}
+#sprite97 {
+	background-position: -600px -120px;
+}
+#sprite98 {
+	background-position: -650px -120px;
+}
+
+#sprite99 {
+	background-position: 0px -140px;
+}
+#sprite100 {
+	background-position: -50px -140px;
+}
+#sprite101 {
+	background-position: -100px -140px;
+}
+#sprite102 {
+	background-position: -150px -140px;
+}
+#sprite103 {
+	background-position: -200px -140px;
+}
+#sprite104 {
+	background-position: -250px -140px;
+}
+#sprite105 {
+	background-position: -300px -140px;
+}
+#sprite106 {
+	background-position: -350px -140px;
+}
+#sprite107 {
+	background-position: -400px -140px;
+}
+#sprite108 {
+	background-position: -450px -140px;
+}
+#sprite109 {
+	background-position: -500px -140px;
+}
+#sprite110 {
+	background-position: -550px -140px;
+}
+#sprite111 {
+	background-position: -600px -140px;
+}
+#sprite112 {
+	background-position: -650px -140px;
+}
+
+
+#sprite113 {
+	background-position: 0px -160px;
+}
+#sprite114 {
+	background-position: -50px -160px;
+}
+#sprite115 {
+	background-position: -100px -160px;
+}
+#sprite116 {
+	background-position: -150px -160px;
+}
+#sprite117 {
+	background-position: -200px -160px;
+}
+#sprite118 {
+	background-position: -250px -160px;
+}
+#sprite119 {
+	background-position: -300px -160px;
+}
+#sprite120 {
+	background-position: -350px -160px;
+}
+#sprite121 {
+	background-position: -400px -160px;
+}
+#sprite122 {
+	background-position: -450px -160px;
+}
+#sprite123 {
+	background-position: -500px -160px;
+}
+#sprite124 {
+	background-position: -550px -160px;
+}
+#sprite125 {
+	background-position: -600px -160px;
+}
+#sprite126 {
+	background-position: -650px -160px;
+}
+
+#ball {
+	clear:both;
+	background-image: url("../images/ball.png");
+    float: left;
+    
+    /*margin-left: 350px;
+    margin-top: 260px;*/
+	
+    height: 16px;
+	width: 16px;
+	/*border: 1px solid black;*/
+	position:absolute;
+	/*top:600px;
+	left: 500px;*/
+	top:620px;
+	left: 470px;
+}
+
+#bar {
+	float: left;
+	position:absolute;
+	height: 10px;
+	width: 140px;
+	border: 3px solid #A543FB;	
+	/*top:650px;
+	left:440px;*/
+	background-color:#C587FC;
+	border-radius:15px 15px 15px 15px;
+	top:670px;
+	left:410px;
+	cursor: pointer;
+}
